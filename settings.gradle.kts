@@ -25,3 +25,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Realtime-voice-sdk"
 include(":sample")
+include(":sdk-core")
+include(":sdk-audio")
+include(":sdk-transport")
