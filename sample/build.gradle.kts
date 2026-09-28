@@ -42,4 +42,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(project(":sdk-core"))
+    implementation(project(":sdk-audio"))
+    implementation(project(":sdk-transport"))
+
+    implementation(libs.androidx.appcompat)
 }
