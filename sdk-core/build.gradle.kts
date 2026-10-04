@@ -1,24 +1,30 @@
 plugins {
-    id("java-library")
+    `java-library`
     alias(libs.plugins.jetbrains.kotlin.jvm)
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    alias(libs.plugins.kover)
 }
 
 kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
-    }
+    jvmToolchain(17)
 }
 
 dependencies {
+    api(libs.kotlinx.coroutines.core)
+
     testImplementation(libs.kotlin.test)
-    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
 }
 
 tasks.test {
-    useJUnit()
+    useJUnitPlatform()
+    testLogging { events("passed", "skipped", "failed") }
+}
+
+kover {
+    reports {
+        verify {
+            rule { minBound(90) }
+        }
+    }
 }
