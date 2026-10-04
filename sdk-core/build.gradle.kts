@@ -24,7 +24,7 @@ tasks.test {
 kover {
     reports {
         verify {
-            rule { minBound(90) }
+            rule { minBound(100) }
         }
     }
 }
