@@ -40,6 +40,7 @@ dependencies {
     testImplementation(libs.mockk)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockwebserver)
+    testImplementation(libs.kotlin.reflect)
 
     implementation(project(":sdk-core"))
 }
