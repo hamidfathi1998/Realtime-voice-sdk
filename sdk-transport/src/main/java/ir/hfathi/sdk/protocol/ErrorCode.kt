@@ -1,0 +1,13 @@
+package ir.hfathi.sdk.protocol
+
+enum class ErrorCode(val code: Int) {
+    INVALID_FRAME(1001),
+    CHECKSUM_MISMATCH(1002),
+    UNSUPPORTED_CODEC(1003),
+    AUTHENTICATION_FAILED(1004),
+    SESSION_NOT_FOUND(1005),
+    TRANSPORT_ERROR(1006),
+    TIMEOUT(1007),
+    RESOURCE_EXHAUSTED(1008),
+    UNKNOWN(9999)
+}
