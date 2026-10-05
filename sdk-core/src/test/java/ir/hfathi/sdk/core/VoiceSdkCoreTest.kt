@@ -1,8 +1,8 @@
 package ir.hfathi.sdk.core
 
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
-import org.junit.Test
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.junit5.JUnit5Asserter.assertTrue
 
 class VoiceSdkCoreTest {
 
